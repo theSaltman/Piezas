@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/theSaltman/Piezas/badge.svg?branch=master)](https://coveralls.io/github/theSaltman/Piezas?branch=master)
 [![Build Status](https://travis-ci.org/theSaltman/Piezas.svg?branch=master)](https://travis-ci.org/theSaltman/Piezas)
 
 # Piezas
