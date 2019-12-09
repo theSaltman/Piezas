@@ -24,15 +24,12 @@
 Piezas::Piezas() {
 	turn = X;
 	board.resize(BOARD_ROWS);
-	std::cout << board.size() << std::endl;
 	for (int i = 0; i < BOARD_ROWS; i++) {
 		board[i].resize(BOARD_COLS);
-		std::cout << board[i].size() << std::endl;
 	}
 	for (int i = 0; i < BOARD_ROWS; i++) {
 		for (int j = 0; j < BOARD_COLS; j++) {
 			board[i][j] = Blank;
-			std::cout << board[i][j] << " " << i << " " << j << std::endl;
 		}
 	}
 }
@@ -42,15 +39,15 @@ Piezas::Piezas() {
  * same size as previously specified
 **/
 void Piezas::reset() {
-/*	board.resize(BOARD_ROWS);
+	board.resize(BOARD_ROWS);
 	for (int i = 0; i < BOARD_COLS; i++) {
 		board[i].resize(BOARD_COLS);
-	}*/
-/*	for (int i = 0; i < BOARD_ROWS; i++) {
-		for (int j = 0; j < BOARD_COLS; i++) {
+	}
+	for (int i = 0; i < BOARD_ROWS; i++) {
+		for (int j = 0; j < BOARD_COLS; j++) {
 			board[i][j] = Blank;
 		}
-	}*/
+	}
 }
 
 /**
