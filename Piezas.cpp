@@ -46,11 +46,11 @@ void Piezas::reset() {
 	for (int i = 0; i < BOARD_COLS; i++) {
 		board[i].resize(BOARD_COLS);
 	}*/
-	for (int i = 0; i < BOARD_ROWS; i++) {
+/*	for (int i = 0; i < BOARD_ROWS; i++) {
 		for (int j = 0; j < BOARD_COLS; i++) {
 			board[i][j] = Blank;
 		}
-	}
+	}*/
 }
 
 /**
