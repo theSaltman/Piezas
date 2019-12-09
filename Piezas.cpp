@@ -38,10 +38,10 @@ Piezas::Piezas() {
  * same size as previously specified
 **/
 void Piezas::reset() {
-	board.resize(BOARD_ROWS);
+/*	board.resize(BOARD_ROWS);
 	for (int i = 0; i < BOARD_COLS; i++) {
 		board[i].resize(BOARD_COLS);
-	}
+	}*/
 	for (int i = 0; i < (int)board.size(); i++) {
 		for (int j = 0; j < (int)board[i].size(); i++) {
 			board[i][j] = Blank;
