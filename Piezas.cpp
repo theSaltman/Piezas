@@ -23,12 +23,15 @@
 Piezas::Piezas() {
 	turn = X;
 	board.resize(BOARD_ROWS);
+	std::cout << board.size() << std::endl;
 	for (int i = 0; i < BOARD_COLS; i++) {
 		board[i].resize(BOARD_COLS);
+		std::cout << board[i].size() << std::endl;
 	}
 	for (int i = 0; i < (int)board.size(); i++) {
 		for (int j = 0; j < (int)board[i].size(); i++) {
 			board[i][j] = Blank;
+			std::cout << board[i][j] << std::endl;
 		}
 	}
 }
