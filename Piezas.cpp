@@ -29,8 +29,8 @@ Piezas::Piezas() {
 		board[i].resize(BOARD_COLS);
 		std::cout << board[i].size() << std::endl;
 	}
-	for (int i = 0; i < (int)board.size(); i++) {
-		for (int j = 0; j < (int)board[i].size(); i++) {
+	for (int i = 0; i < BOARD_ROWS; i++) {
+		for (int j = 0; j < BOARD_COLS; i++) {
 			board[i][j] = Blank;
 			std::cout << board[i][j] << " " << i << " " << j << std::endl;
 		}
