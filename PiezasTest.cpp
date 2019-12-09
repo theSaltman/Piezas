@@ -105,3 +105,138 @@ TEST(PiezasTest, resetRowUnder) {
 	board.reset();
 	ASSERT_EQ(board.pieceAt(-1,0), Invalid);
 }
+
+/*dropPiece(int column) tests*/
+
+TEST(PiezasTest, dropPieceOver) {
+	Piezas board;
+	ASSERT_EQ(board.dropPiece(4), Invalid);
+}
+TEST(PiezasTest, dropPieceUnder) {
+	Piezas board;
+	ASSERT_EQ(board.dropPiece(-1), Invalid);
+}
+
+TEST(PiezasTest, dropPieceColumn00) {
+	Piezas board;
+	ASSERT_EQ(board.dropPiece(0), X);
+}
+TEST(PiezasTest, dropPieceColumn01) {
+	Piezas board;
+	board.dropPiece(0);
+	ASSERT_EQ(board.dropPiece(0), O);
+}
+TEST(PiezasTest, dropPieceColumn02) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(0);
+	ASSERT_EQ(board.dropPiece(0), X);
+}
+TEST(PiezasTest, dropPieceColumn0ColFull) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(0);
+	ASSERT_EQ(board.dropPiece(0), Blank);
+}
+TEST(PiezasTest, dropPieceColumn0ColFullTurnStillChanges) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(0);
+	ASSERT_EQ(board.dropPiece(1), X);
+}
+
+TEST(PiezasTest, dropPieceColumn10) {
+	Piezas board;
+	ASSERT_EQ(board.dropPiece(1), X);
+}
+TEST(PiezasTest, dropPieceColumn11) {
+	Piezas board;
+	board.dropPiece(1);
+	ASSERT_EQ(board.dropPiece(1), O);
+}
+TEST(PiezasTest, dropPieceColumn12) {
+	Piezas board;
+	board.dropPiece(1);
+	board.dropPiece(1);
+	ASSERT_EQ(board.dropPiece(1), X);
+}
+TEST(PiezasTest, dropPieceColumn1ColFull) {
+	Piezas board;
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	ASSERT_EQ(board.dropPiece(1), Blank);
+}
+TEST(PiezasTest, dropPieceColumn1ColFullTurnStillChanges) {
+	Piezas board;
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	ASSERT_EQ(board.dropPiece(0), X);
+}
+
+TEST(PiezasTest, dropPieceColumn20) {
+	Piezas board;
+	ASSERT_EQ(board.dropPiece(2), X);
+}
+TEST(PiezasTest, dropPieceColumn21) {
+	Piezas board;
+	board.dropPiece(2);
+	ASSERT_EQ(board.dropPiece(2), O);
+}
+TEST(PiezasTest, dropPieceColumn22) {
+	Piezas board;
+	board.dropPiece(2);
+	board.dropPiece(2);
+	ASSERT_EQ(board.dropPiece(2), X);
+}
+TEST(PiezasTest, dropPieceColumn2ColFull) {
+	Piezas board;
+	board.dropPiece(2);
+	board.dropPiece(2);
+	board.dropPiece(2);
+	ASSERT_EQ(board.dropPiece(2), Blank);
+}
+TEST(PiezasTest, dropPieceColumn2ColFullTurnStillChanges) {
+	Piezas board;
+	board.dropPiece(2);
+	board.dropPiece(2);
+	board.dropPiece(2);
+	board.dropPiece(2);
+	ASSERT_EQ(board.dropPiece(0), X);
+}
+
+TEST(PiezasTest, dropPieceColumn30) {
+	Piezas board;
+	ASSERT_EQ(board.dropPiece(3), X);
+}
+TEST(PiezasTest, dropPieceColumn31) {
+	Piezas board;
+	board.dropPiece(3);
+	ASSERT_EQ(board.dropPiece(3), O);
+}
+TEST(PiezasTest, dropPieceColumn32) {
+	Piezas board;
+	board.dropPiece(3);
+	board.dropPiece(3);
+	ASSERT_EQ(board.dropPiece(3), X);
+}
+TEST(PiezasTest, dropPieceColumn3ColFull) {
+	Piezas board;
+	board.dropPiece(3);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	ASSERT_EQ(board.dropPiece(3), Blank);
+}
+TEST(PiezasTest, dropPieceColumn3ColFullTurnStillChanges) {
+	Piezas board;
+	board.dropPiece(3);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	ASSERT_EQ(board.dropPiece(0), X);
+}
