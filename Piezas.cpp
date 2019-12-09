@@ -25,7 +25,7 @@ Piezas::Piezas() {
 	turn = X;
 	board.resize(BOARD_ROWS);
 	std::cout << board.size() << std::endl;
-	for (int i = 0; i < BOARD_COLS; i++) {
+	for (int i = 0; i < BOARD_ROWS; i++) {
 		board[i].resize(BOARD_COLS);
 		std::cout << board[i].size() << std::endl;
 	}
