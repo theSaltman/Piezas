@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/theSaltman/Piezas.svg?branch=master)](https://travis-ci.org/theSaltman/Piezas)
+
 # Piezas
 
 ## Associated Enumerated Types
