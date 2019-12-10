@@ -316,7 +316,7 @@ TEST(PiezasTest, pieceAt10O) {
 	board.dropPiece(1);
 	board.dropPiece(1);
 	board.dropPiece(0);
-	ASSERT_EQ(board.pieceAt(1,0), X);
+	ASSERT_EQ(board.pieceAt(1,0), O);
 }
 
 TEST(PiezasTest, pieceAtRowUnder) {
@@ -334,4 +334,23 @@ TEST(PiezasTest, pieceAtColUnder) {
 TEST(PiezasTest, pieceAtColOver) {
 	Piezas board;
 	ASSERT_EQ(board.pieceAt(0,4), Invalid);
+}
+
+/*gameState() tests*/
+
+TEST(PiezasTest, gameStateXWinsCol0) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(0);
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	ASSERT_EQ(board.gameState(), X);
 }
