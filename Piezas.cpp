@@ -86,7 +86,6 @@ Piece Piezas::dropPiece(int column) {
 			return X;	
 		}
 	}
-	
 }
 
 /**

@@ -240,3 +240,98 @@ TEST(PiezasTest, dropPieceColumn3ColFullTurnStillChanges) {
 	board.dropPiece(3);
 	ASSERT_EQ(board.dropPiece(0), X);
 }
+
+/*pieceAt(int row, int column) tests*/
+TEST(PiezasTest, pieceAt00Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(0,0), Blank);
+}
+TEST(PiezasTest, pieceAt01Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(0,1), Blank);
+}
+TEST(PiezasTest, pieceAt02Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(0,2), Blank);
+}
+TEST(PiezasTest, pieceAt03Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(0,3), Blank);
+}
+TEST(PiezasTest, pieceAt10Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(1,0), Blank);
+}
+TEST(PiezasTest, pieceAt11Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(1,1), Blank);
+}
+TEST(PiezasTest, pieceAt12Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(1,2), Blank);
+}
+TEST(PiezasTest, pieceAt13Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(1,3), Blank);
+}
+TEST(PiezasTest, pieceAt20Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(2,0), Blank);
+}
+TEST(PiezasTest, pieceAt21Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(2,1), Blank);
+}
+TEST(PiezasTest, pieceAt22Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(2,2), Blank);
+}
+TEST(PiezasTest, pieceAt23Blank) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(2,3), Blank);
+}
+
+TEST(PiezasTest, pieceAt00X) {
+	Piezas board;
+	board.dropPiece(0);
+	ASSERT_EQ(board.pieceAt(0,0), X);
+}
+TEST(PiezasTest, pieceAt10X) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(0);
+	ASSERT_EQ(board.pieceAt(1,0), X);
+}
+
+TEST(PiezasTest, pieceAt00O) {
+	Piezas board;
+	board.dropPiece(1);
+	board.dropPiece(0);
+	ASSERT_EQ(board.pieceAt(0,0), O);
+}
+TEST(PiezasTest, pieceAt10O) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(0);
+	ASSERT_EQ(board.pieceAt(1,0), X);
+}
+
+TEST(PiezasTest, pieceAtRowUnder) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(-1,0), Invalid);
+}
+TEST(PiezasTest, pieceAtRowOver) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(3,0), Invalid);
+}
+TEST(PiezasTest, pieceAtColUnder) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(0,-1), Invalid);
+}
+TEST(PiezasTest, pieceAtColOver) {
+	Piezas board;
+	ASSERT_EQ(board.pieceAt(0,4), Invalid);
+}
