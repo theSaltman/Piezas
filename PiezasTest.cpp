@@ -566,3 +566,87 @@ TEST(PiezasTest, gameStateOWinsRow2) {
 	board.dropPiece(3);
 	ASSERT_EQ(board.gameState(), O);
 }
+
+TEST(PiezasTest, gameState1SpaceBlank) {
+	Piezas board;
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	ASSERT_EQ(board.gameState(), Invalid);
+}
+TEST(PiezasTest, gameStateAllBlank) {
+	Piezas board;
+	ASSERT_EQ(board.gameState(), Invalid);
+}
+TEST(PiezasTest, gameStateTie1Piece) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(1);
+	board.dropPiece(0);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	ASSERT_EQ(board.gameState(), Blank);
+}
+TEST(PiezasTest, gameStateTie2Pieces) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(1);
+	board.dropPiece(0);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(1);
+	board.dropPiece(0);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	ASSERT_EQ(board.gameState(), Blank);
+}
+TEST(PiezasTest, gameStateTie3Pieces) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	ASSERT_EQ(board.gameState(), Blank);
+}
+TEST(PiezasTest, gameStateTie4Pieces) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	ASSERT_EQ(board.gameState(), Blank);
+}
