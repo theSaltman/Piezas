@@ -75,7 +75,7 @@ Piece Piezas::dropPiece(int column) {
 			loc = i;
 		}
 	}
-	if (found == 0) {
+	if (!found) {
 		return Blank;
 	} else {
 		if (turn == X) {
@@ -196,13 +196,12 @@ Piece Piezas::gameState()
 	if (foundBlank > 0) {
 		return Invalid;
 	}
-	if (Xcount == Ocount) {
-		return Blank;
-	}
 	if (Xcount > Ocount) {
 		return X;
 	}
 	if (Ocount > Xcount) {
 		return O;
 	}
+	return Blank;
 }
+
