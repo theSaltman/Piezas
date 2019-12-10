@@ -466,3 +466,103 @@ TEST(PiezasTest, gameStateOWinsCol3) {
 	board.dropPiece(3);
 	ASSERT_EQ(board.gameState(), O);
 }
+
+TEST(PiezasTest, gameStateXWinsRow0) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	ASSERT_EQ(board.gameState(), X);
+}
+TEST(PiezasTest, gameStateXWinsRow1) {
+	Piezas board;
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(3);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	ASSERT_EQ(board.gameState(), X);
+}
+TEST(PiezasTest, gameStateXWinsRow2) {
+	Piezas board;
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(3);
+	board.dropPiece(0);
+	board.dropPiece(2);
+	board.dropPiece(2);
+	ASSERT_EQ(board.gameState(), X);
+}
+
+TEST(PiezasTest, gameStateOWinsRow0) {
+	Piezas board;
+	board.dropPiece(5);
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(2);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	ASSERT_EQ(board.gameState(), O);
+}
+TEST(PiezasTest, gameStateOWinsRow1) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(2);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	ASSERT_EQ(board.gameState(), O);
+}
+TEST(PiezasTest, gameStateOWinsRow2) {
+	Piezas board;
+	board.dropPiece(0);
+	board.dropPiece(2);
+	board.dropPiece(0);
+	board.dropPiece(0);
+	board.dropPiece(1);
+	board.dropPiece(2);
+	board.dropPiece(1);
+	board.dropPiece(1);
+	board.dropPiece(3);
+	board.dropPiece(2);
+	board.dropPiece(3);
+	board.dropPiece(3);
+	ASSERT_EQ(board.gameState(), O);
+}
