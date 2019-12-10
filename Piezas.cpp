@@ -108,8 +108,7 @@ Piece Piezas::pieceAt(int row, int column) {
  * or horizontally. If both X's and O's have the same max number of pieces in a
  * line, it is a tie.
 **/
-Piece Piezas::gameState()
-{
+Piece Piezas::gameState() {
 	int Xcount = 0;
 	int Ocount = 0;
 	int Xvert = 0;
@@ -134,6 +133,7 @@ Piece Piezas::gameState()
 				if (board[i][j] != board[i][j-1]) {
 					Xhor = 0;
 					Ohor = 0;
+				}
 				if (board[i][j] == X) {
 					Xhor++;
 				} else {
