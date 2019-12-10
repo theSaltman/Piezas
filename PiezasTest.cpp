@@ -367,7 +367,7 @@ TEST(PiezasTest, gameStateXWinsCol1) {
 	board.dropPiece(2);
 	board.dropPiece(2);
 	board.dropPiece(1);
-	board.dropPiece(0);
+	board.dropPiece(3);
 	ASSERT_EQ(board.gameState(), X);
 }
 TEST(PiezasTest, gameStateXWinsCol2) {
@@ -444,10 +444,10 @@ TEST(PiezasTest, gameStateOWinsCol2) {
 	board.dropPiece(1);
 	board.dropPiece(3);
 	board.dropPiece(2);
-	board.dropPiece(2);
+	board.dropPiece(1);
 	board.dropPiece(0);
 	board.dropPiece(3);
-	board.dropPiece(1);
+	board.dropPiece(2);
 	ASSERT_EQ(board.gameState(), O);
 }
 TEST(PiezasTest, gameStateOWinsCol3) {
