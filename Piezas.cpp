@@ -131,20 +131,13 @@ Piece Piezas::gameState()
 					Ohor++;
 				}
 			} else {
-				if (board[i][j] == board[i][j-1]) {
-					if (board[i][j] == X) {
-						Xhor++;
-					} else {
-						Ohor++;
-					}
-				} else {
+				if (board[i][j] != board[i][j-1]) {
 					Xhor = 0;
 					Ohor = 0;
-					if (board[i][j] == X) {
-						Xhor++;
-					} else {
-						Ohor++;
-					}
+				if (board[i][j] == X) {
+					Xhor++;
+				} else {
+					Ohor++;
 				}
 			}
 			if (Xhor > Xcount) {
@@ -169,20 +162,14 @@ Piece Piezas::gameState()
 					Overt++;
 				}
 			} else {
-				if (board[j][i] == board[j-1][i]) {
-					if (board[j][i] == X) {
-						Xvert++;
-					} else {
-						Overt++;
-					}
-				} else {
+				if (board[j][i] != board[j-1][i]) {
 					Xvert = 0;
 					Overt = 0;
-					if (board[j][i] == X) {
-						Xvert++;
-					} else {
-						Overt++;
-					}
+				}
+				if (board[j][i] == X) {
+					Xvert++;
+				} else {
+					Overt++;
 				}
 			}
 			if (Xvert > Xcount) {
